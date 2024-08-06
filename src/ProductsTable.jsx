@@ -16,6 +16,11 @@ export default function ProductsTable({
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Deleted!',
+          text: 'The item has been successfully deleted.',
+          icon: 'success',
+        });
         deleteProductByIndex(index);
       }
     });

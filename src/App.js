@@ -4,6 +4,8 @@ import SearchBar from "./SearchBar";
 import ProductsTable from "./ProductsTable";
 import "./App.css";
 import WariningMessage from "./WarningMessage";
+import Swal from 'sweetalert2';
+
 
 //products
 //data = index product to update
@@ -119,7 +121,28 @@ function App() {
         handleChange={handleChangeOfProduct}
         handleSubmit={handleSubmit}
       >
-        <button id="create-btn" className="btn btn-primary">
+        <button id="create-btn" className="btn btn-primary" onClick={() => {
+          if (document.getElementById("create-btn").innerText === "Update Product") {
+            Swal.fire({
+              title: 'Update Product',
+              text: 'Are you sure you want to update this product?',
+              icon: 'info',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, update it!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire({
+                  title: 'Product Updated',
+                  text: 'The product has been successfully updated.',
+                  icon: 'success',
+                });
+                updateProduct();
+              }
+            });
+          }
+        }}>
           {updatedProduct ? "Update Product" : "Add Product"}
         </button>
       </CreateProduct>
