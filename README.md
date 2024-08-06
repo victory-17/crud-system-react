@@ -30,24 +30,31 @@ Check out the live demo [here](https://victory-17.github.io/crud-system-react/).
 To get a local copy up and running, follow these steps:
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/victory-17/crud-system-react.git
-
+   ```
 2. **Navigate to the project directory**
+
    ```bash
    cd crud-system-react
-
+   ```
 3. **Install dependencies**
+
    ```bash
    npm install
-
+   ```
 4. **Run the app**
+
    ```bash
    npm start
-
+   ```
 5. **Open your browser and go to**
+
    ```bash
    http://localhost:3000
+   ```
 
 ## Usage
+
 Simply create new entries by filling out the form, view all existing entries, update any entry as needed, and delete entries that are no longer required. The app provides a straightforward way to manage your data effectively.
