@@ -12,6 +12,7 @@ Check out the live demo [here](https://victory-17.github.io/crud-system-react/).
 - Read and display all existing entries
 - Update existing entries with new information
 - Delete entries that are no longer needed
+- Input validation to ensuring right inputs
 - User-friendly interface for seamless navigation
 
 ## Technologies Used
