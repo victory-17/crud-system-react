@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
 
 
@@ -26,6 +26,8 @@ export default function CreateProduct({
     handleChange({ target: { name: 'cat', value: '' } });
     handleChange({ target: { name: 'price', value: '' } });
     handleChange({ target: { name: 'description', value: '' } });
+
+    document.getElementById('product-form').reset();
   };
 
   return (
