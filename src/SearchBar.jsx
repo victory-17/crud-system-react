@@ -1,15 +1,6 @@
-import Swal from 'sweetalert2';
-
 export default function SearchBar({ filterProducts }) {
   const handleSearch = (e) => {
     filterProducts(e);
-    if (e.target.value.trim() === '') {
-      Swal.fire({
-        icon: 'warning',
-        title: 'No Results',
-        text: 'No matching products found!',
-      });
-    }
   };
 
   return (
@@ -19,7 +10,7 @@ export default function SearchBar({ filterProducts }) {
         className="form-control"
         id="search-input"
         onChange={handleSearch}
-        placeholder="search by product name.."
+        placeholder="Search by product name..."
       />
     </div>
   );
